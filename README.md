@@ -5,9 +5,9 @@ Projecte fet amb NodeJS, express, MySQL i semàfors per testejar diferents escen
 
 ## scenarios
 
-### Escenari 1: control sense transaccions
+### Escenari 1: control sense bloqueigs de BD
 
-Concurrencia de peticions p er modificar 1 registre:
+Concurrencia de peticions per modificar 1 registre:
 
 1. Es llença una petició de modificar un registre de la BD
 2. El procés recupera el registre i s'espera a que s'inicii una petició del mateix registre
@@ -40,6 +40,9 @@ sequenceDiagram
     Note over Request2: the register is NOT updated, updatedRows=0
     deactivate Request2
 ```
+
+### Escenari 2: control amb bloqueig de taula a nivell d BD
+
 
 ## Changelog
 
