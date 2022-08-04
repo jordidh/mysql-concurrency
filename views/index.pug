@@ -2,4 +2,9 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Projecte fet amb NodeJS, express, MySQL i semàfors per testejar diferents escenaris de concurrència
+
+  h2 Escenari 1
+
+  form(action='/scenario1' method='post')
+    input#submitSC1(name="submitSC1" type='submit' value='Inicia')
